@@ -217,8 +217,11 @@ st.markdown('<div class="main-title">🌟 고1을 위한 꿈의 선택과목 마
 st.markdown("<h3 style='text-align: center; color: #5B2C6F; font-weight: 600;'>내 관심 계열을 고르면 나에게 딱 어울리는 마법같은 교과목 목록을 배달해 드려요! 🧭🎁</h3>", unsafe_allow_html=True)
 st.write("")
 
-# 웰컴 애니메이션 데코레이션
-st.snow() if random.random() > 0.5 else st.balloons()
+# 웰컴 애니메이션 데코레이션 (오류 수정 완료 ✅)
+if random.random() > 0.5:
+    st.snow()
+else:
+    st.balloons()
 
 # 탭을 나누어 두 가지 기능 제공 (1. 메인 추천 매치, 2. 미니 자가 진단 퀴즈)
 tab1, tab2 = st.tabs(["🎯 바로 계열 탐색하기", "🔮 관심계열 미니 테스트"])
